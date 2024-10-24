@@ -25,7 +25,7 @@ intercept(context: ExecutionContext, next: CallHandler<any>): Observable<any> {
   //console.log('Im running before the handler',context);
 
   return next.handle().pipe(
-    map((data: any)=>{
+    map((data: any)=>{ // this data argument is the data we are going to send back in the res
       //run something before a response is sent out
       //console.log('Im running before response is sent out', data);
 
