@@ -7,7 +7,8 @@ import { ReportsModule } from './reports/reports.module';
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { User } from "./users/user.entity";
 import { Report } from "./reports/report.entity";
-import cookieSession from "cookie-session";
+
+const cookieSession = require('cookie-session');
 
 @Module({
   //SQLite is a file based database
@@ -37,7 +38,7 @@ export class AppModule {
     consumer
       .apply(
         cookieSession({
-          keys: ['strToEncryptInfo'],
+          keys: ['asdfasfd'],
         }),
       )
       .forRoutes('*');
