@@ -17,10 +17,16 @@ export class UsersService {
     return this.repo.save(user);
   }
 
-  findOne(id: number) {
+  async findOne(id: number) {
     //this.repo.findOneById()
     if (!id){return null;}
-    return this.repo.findOneBy({ id });
+   // return this.repo.findOneBy({ id });
+    const user = await this.repo.findOne({
+      where: { id },
+      relations: ['reports'],
+    });
+    console.log(user)
+    return user
   }
 
   find(email: string) {
