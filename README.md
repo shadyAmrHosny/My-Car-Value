@@ -24,8 +24,16 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+A NestJS-based RESTful API for estimating car values and managing vehicle data.
 
+## Features
+
+- Car Value Estimation: Calculate a vehicle's worth based on user-provided parameters.
+- CRUD Operations: Create, read, update, and delete car records efficiently.
+- Database Integration: Utilizes SQLite for data storage, with TypeORM for seamless database interactions.
+- Modular Architecture: Organized codebase promoting scalability and maintainability.
+- Validation: Ensures data integrity through robust input validation mechanisms.
+  
 ## Installation
 
 ```bash
